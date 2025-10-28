@@ -7,7 +7,6 @@ class House:
         return self._price * (1 - discount / 100)
 class SmallHouse(House):
     def __init__(self, price):
-        # Create a SmallHouse with fixed area of 40 sqm
         super().__init__(area=40, price=price)
         self.name = f"SmallHouse ({self._area} sqm)"
 
@@ -53,11 +52,3 @@ class Human:
             print(f"You need rubles{shortage:f} more.")
             return False
 
-
-# Create a small house costing 50000 rubles
-small_house = SmallHouse(50000)
-
-# Create a human and try to buy it
-human = Human()
-human.earn_money(60000)
-human.buy_house(small_house)
