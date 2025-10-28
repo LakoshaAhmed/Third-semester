@@ -1,3 +1,12 @@
+   ##### Task 6. House Class
+
+#Create a class `House`
+
+#Create an `__init__()` method and define two dynamic properties inside it: `_area` and `_price`. They get their initial values from the parameters of the `__init__()` method
+
+#Create a `final_price()` method that takes a discount size as a parameter and returns the price taking into account the given discount.
+
+
 class House:
     def __init__(self, area, price):
         self._area = area
@@ -5,10 +14,6 @@ class House:
         self.name = f"House ({area} sqm)" 
     def final_price(self, discount=0):
         return self._price * (1 - discount / 100)
-class SmallHouse(House):
-    def __init__(self, price):
-        super().__init__(area=40, price=price)
-        self.name = f"SmallHouse ({self._area} sqm)"
 
 class Human:
     default_name = "Ahmed Lakosha"
@@ -51,4 +56,5 @@ class Human:
             print(f" Warning: Not enough money. Try to work more ")
             print(f"You need rubles{shortage:f} more.")
             return False
+
 
